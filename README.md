@@ -13,8 +13,9 @@ docker build -t test-image .
 
 ## How to run
 ```
+# at terminal
 dummyserv 8081
-# open the brower
+# open browser
 localhost:8081
 ```
 
