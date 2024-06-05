@@ -2,17 +2,21 @@
 Hello world with a webserver in C
 
 
-## How to build
-```gcc -o dummyserv dummy_serv.c```
+## Build docker image
+```
+# under hello_http folder
+docker build -t test-image .
+```
 
-Or to build a static binary
-
+## Complie C code
 ```gcc -o dummyserv dummy_serv.c```
 
 ## How to run
-The port argument is optional and when not included the service will default to port 8080
-
-```dummyserv <port>```
+```
+dummyserv 8081
+# open the brower
+localhost:8081
+```
 
 
 
