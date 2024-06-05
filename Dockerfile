@@ -3,10 +3,12 @@ WORKDIR /BUILD
 COPY dummy_serv.c .
 RUN apt-get update
 RUN apt-get install gcc -y
+RUN apt-get -y install git
+RUN apt-get -y install bash
 RUN gcc -o dummyserv -static dummy_serv.c
 RUN ls -lh /BUILD
 
 FROM scratch AS hw_sratch
 COPY --from=hw_build /BUILD/dummyserv /dummyserv
-CMD ["/dummyserv", "8081"]
-EXPOSE 8081
+CMD ["/dummyserv", "12344"]
+EXPOSE 12344
